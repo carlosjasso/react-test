@@ -35,7 +35,7 @@ npm i --save-dev @types/react-router-dom # install react-router-dom types
 [Deployment][https://create-react-app.dev/docs/deployment/]
 
 ```bash
-npm install -d serve # basic development http server
+npm install -D serve # basic development http server
 npx serve -s out -l 8080
 ```
 

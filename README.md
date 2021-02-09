@@ -9,7 +9,7 @@ mkdir -v react-test # create the folder the project is going to live in
 cd react-test/ # go into that folder
 npm init --y # init a a new npm package | "--y" = send "yes" to all questions
 npm i react react-dom # install react dependencies
-npm i -D typescript webpack webpack-cli http-server @types/react @types/react-dom # install dev dependencies (not to be included in final project result)
+npm i -D typescript webpack webpack-cli @types/react @types/react-dom # install dev dependencies (not to be included in final project result)
 npx tsc --init # init typescript configuration
 # write src/App.tsx and index.html
 npx tsc # transpile TS to JS

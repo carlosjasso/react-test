@@ -30,7 +30,7 @@ npm i --save-dev @types/react-router-dom # install react-router-dom types
 
 ```
 
-## Server over HTTP
+## Serve over HTTP
 
 [Deployment][https://create-react-app.dev/docs/deployment/]
 
@@ -40,4 +40,6 @@ npx serve -s out -l 8080
 ```
 
 # to-do
+[react children rendering](https://fettblog.eu/typescript-react/children/)
 [react-helmet](https://www.npmjs.com/package/react-helmet)
+[Copy from public to out](https://webpack.js.org/plugins/copy-webpack-plugin/)

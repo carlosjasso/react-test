@@ -40,8 +40,8 @@ npx serve -s out -l 8080
 ```
 
 # to-do
+[react children rendering](https://fettblog.eu/typescript-react/children/)
 [scss modules](https://developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/)
 [webpack scss](https://webpack.js.org/loaders/sass-loader/)
-[react children rendering](https://fettblog.eu/typescript-react/children/)
-[react-helmet](https://www.npmjs.com/package/react-helmet)
 [Copy from public to out](https://webpack.js.org/plugins/copy-webpack-plugin/)
+[react-helmet](https://www.npmjs.com/package/react-helmet)

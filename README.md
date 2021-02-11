@@ -39,6 +39,12 @@ npm install -D serve # basic development http server
 npx serve -s out -l 8080
 ```
 
+## Helmet
+```bash
+npm i react-helmet
+npm i --save-dev @types/react-helmet
+```
+
 # to-do
 [react children rendering](https://fettblog.eu/typescript-react/children/)
 [scss modules](https://developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/)

@@ -1,10 +1,10 @@
 import React from "react";
-import { Layout } from "../layout/default"
+import { Layout } from "../shared/default-layout"
 import Styles from "./index.module.scss";
 
 export function Home() {
     return(
-        <Layout >
+        <Layout title="Home">
             <main id="home" className={Styles["home-container"]}>
                 <h1>Hello from home!</h1>
             </main>

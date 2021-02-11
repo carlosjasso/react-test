@@ -1,9 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const outDir = path.join(__dirname, "../out");
+const isDevelopment = process.env.NODE_ENV === "development";
 
-// clear output dir
+const docsDir = path.join(__dirname, );
+
+const dirName = isDevelopment ? "../out" : "../docs";
+const outDir = path.join(__dirname, dirName);
+
 if (fs.existsSync(outDir)) {
     fs.readdirSync(outDir).forEach(item => {
         const itemPath = path.join(outDir, item);

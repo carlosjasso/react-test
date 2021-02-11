@@ -1,9 +1,19 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
-export const Layout : React.FunctionComponent = ({ children }) => {
+type Props = {
+    title?: string
+}
+
+export const Layout : React.FunctionComponent<Props> = ({ title, children }) => {
+    const pageTitle = title ? `MyApp | ${title}` : "MyApp";
+
     return (
         <div id="main-layout">
+            <Helmet>
+                <title>{pageTitle}</title>
+            </Helmet>
             <header>
                 <nav>
                     <ul>
@@ -20,9 +30,9 @@ export const Layout : React.FunctionComponent = ({ children }) => {
                 </nav>
                 <hr />
             </header>
-            <main>
+            <div>
                 { children }
-            </main>
+            </div>
         </div>
     );
 }

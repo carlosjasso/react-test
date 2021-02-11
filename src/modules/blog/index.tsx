@@ -1,9 +1,9 @@
 import React from "react";
-import { Layout } from "../layout/default";
+import { Layout } from "../shared/default-layout";
 
 export function Blog() {
     return(
-        <Layout>
+        <Layout title="Blog">
             <main id="blog">
                 <h1>Hello from blog!</h1>
             </main>

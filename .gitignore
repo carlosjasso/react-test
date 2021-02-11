@@ -1,8 +1,5 @@
 # node modules
 node_modules
 
-# app build cache
-cache
-
 # app output dir
 out

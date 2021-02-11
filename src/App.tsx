@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import "./global.scss";
 import { Home } from "./modules/home"
 import { Blog } from "./modules/blog";
 import { About } from "./modules/about";

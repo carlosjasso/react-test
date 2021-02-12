@@ -9,9 +9,19 @@ import { Error404 } from "./modules/error/error404";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-function App() {
-    console.log(window.location.host);
+const prodHosts = ["carlosjasso.dev", "carlosjasso.github.io"];
+const devPaths = {
+    home: "/",
+    blog: "/blog",
+    about: "/about",
+};
+const prodPaths = {
+    home: "/react-test/",
+    blog: "/react-test/blog",
+    about: "/react-test/about",
+}
 
+function App() {
     return (
         <BrowserRouter>
             <Router />
@@ -20,11 +30,14 @@ function App() {
 }
 
 function Router() {
+    const host = window.location.host;
+    const paths = prodHosts.includes(host) ? prodPaths : devPaths;
+
     return(
         <Switch>
-            <Route exact path="/" component={ Home } />
-            <Route path="/blog" component={ Blog } />
-            <Route path="/about" component={ About } />
+            <Route exact path={paths.home} component={ Home } />
+            <Route path={paths.blog} component={ Blog } />
+            <Route path={paths.about} component={ About } />
             <Route component={ Error404 } />
         </Switch>
     );

@@ -1,4 +1,5 @@
 import React from "react";
+import { GetSitePaths } from "../site";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,7 @@ type Props = {
 
 export const Layout : React.FunctionComponent<Props> = ({ title, children }) => {
     const pageTitle = title ? `MyApp | ${title}` : "MyApp";
+    const paths = GetSitePaths();
 
     return (
         <div id="main-layout">
@@ -18,13 +20,13 @@ export const Layout : React.FunctionComponent<Props> = ({ title, children }) => 
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to={paths.home}>Home</Link>
                         </li>
                         <li>
-                            <Link to="/blog">Blog</Link>
+                            <Link to={paths.blog}>Blog</Link>
                         </li>
                         <li>
-                            <Link to="/about">About</Link>
+                            <Link to={paths.about}>About</Link>
                         </li>
                     </ul>
                 </nav>

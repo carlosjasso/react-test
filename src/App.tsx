@@ -2,20 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import "./global.scss";
+import { GetSitePaths } from "./modules/site";
 import { Home } from "./modules/home"
 import { Blog } from "./modules/blog";
 import { About } from "./modules/about";
 import { Error404 } from "./modules/error/error404";
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-type ProdHosts = string[];
-
-type SitePaths = {
-    home : string,
-    blog : string,
-    about : string,
-}
 
 function App() {
     return (
@@ -26,22 +19,7 @@ function App() {
 }
 
 function Router() {
-    const host = window.location.host;
-    const prodHosts = ["carlosjasso.dev", "carlosjasso.github.io"];
-
-    const devPaths : SitePaths = {
-        home: "/",
-        blog: "/blog",
-        about: "/about",
-    }
-    
-    const prodPaths : SitePaths = {
-        home: "/react-test/",
-        blog: "/react-test/blog",
-        about: "/react-test/about",
-    }
-
-    const paths = prodHosts.includes(host) ? prodPaths : devPaths;
+    const paths = GetSitePaths();
 
     return(
         <Switch>

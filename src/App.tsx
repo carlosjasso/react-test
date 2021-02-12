@@ -9,16 +9,12 @@ import { Error404 } from "./modules/error/error404";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-const prodHosts = ["carlosjasso.dev", "carlosjasso.github.io"];
-const devPaths = {
-    home: "/",
-    blog: "/blog",
-    about: "/about",
-};
-const prodPaths = {
-    home: "/react-test/",
-    blog: "/react-test/blog",
-    about: "/react-test/about",
+type ProdHosts = string[];
+
+type SitePaths = {
+    home : string,
+    blog : string,
+    about : string,
 }
 
 function App() {
@@ -31,6 +27,20 @@ function App() {
 
 function Router() {
     const host = window.location.host;
+    const prodHosts = ["carlosjasso.dev", "carlosjasso.github.io"];
+
+    const devPaths : SitePaths = {
+        home: "/",
+        blog: "/blog",
+        about: "/about",
+    }
+    
+    const prodPaths : SitePaths = {
+        home: "/react-test/",
+        blog: "/react-test/blog",
+        about: "/react-test/about",
+    }
+
     const paths = prodHosts.includes(host) ? prodPaths : devPaths;
 
     return(

@@ -10,6 +10,8 @@ import { Error404 } from "./modules/error/error404";
 ReactDOM.render(<App />, document.getElementById('root'));
 
 function App() {
+    console.log(window.location.host);
+
     return (
         <BrowserRouter>
             <Router />
